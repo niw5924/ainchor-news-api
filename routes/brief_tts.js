@@ -4,7 +4,8 @@ const router = express.Router();
 
 router.post('/convert', (req, res) => {
   try {
-    const { text } = req.body;
+    const { anchorName, text } = req.body;
+    console.log('[brief-tts] received anchorName:', anchorName);
     console.log('[brief-tts] received text:', text);
     res.json({ success: true });
   } catch (err) {
