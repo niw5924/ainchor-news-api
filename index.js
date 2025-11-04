@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const briefTTSRoutes = require('./routes/brief_tts');
 
