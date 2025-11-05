@@ -13,10 +13,10 @@ router.post('/convert', async (req, res) => {
     });
     const summary = result.output_text;
     console.log('[brief-tts] summary:', summary);
-    res.json({ success: true, message: summary });
+    res.json({ success: true, anchorName: anchorName, summary: summary });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ success: false, message: err.message });
+    res.status(500).json({ message: err.message });
   }
 });
 
